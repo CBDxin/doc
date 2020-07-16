@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './JingTai';
+import App from './react-hooks/JingTai';
 
 ReactDOM.render(
   <React.StrictMode>
