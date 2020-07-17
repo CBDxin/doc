@@ -14,8 +14,15 @@ Fiddler 是一个使用 C# 编写的 http 抓包工具。Fiddler是以代理WEB�
 
 * AutoResponder 用法（拦截指定请求，并返回自定义数据）
 
-    AutoResponder能够将页面原本需要调用的资源指向其他资源(你能够控制的资源或者可以引用到的资源)。打开 AutoResponder 标签设置，勾选前面两个复选框，开启 Fiddler 的请求自动重定向功能。enable rule的作用是开启或禁用自动重定向功能，我们就可以在下面添加重定向规则了。
-第二个复选框框勾上时，不影响那些没满足我们处理条件的请求。
+    AutoResponder能够将页面原本需要调用的资源指向其他资源(你能够控制的资源或者可以引用到的资源)。打开 AutoResponder 标签设置，勾选前面两个复选框，开启 Fiddler 的请求自动重定向功能。enable rule的作用是开启或禁用自动重定向功能，我们就可以在下面添加重定向规则了。Unmatched request passthrounght复选框框勾上时，那些没满足我们处理条件的请求便不会受到影响。然后点击add rule定义重定向规则以及respond的内容。
+
+* 解密 HTTPS 的网络数据
+
+    通常来说，我们无法查看捕获到的https请求的数据，但fiddler可以通过伪造 CA 证书来欺骗浏览器和服务器，从而实现解密 HTTPS 数据包的目的。大概原理就是在浏览器面前 Fiddler 伪装成一个 HTTPS 服务器，而在真正的 HTTPS 服务器面前 Fiddler 又装成浏览器。方法：Tools -> Telerik Fiddler Options->Decrypt HTTPS Traffic并进行证书的安装。
+
+* 抓取移动设备的数据包
+
+    在电脑与移动设备处于同一局域网的情况下，我们可以通过Fiddler抓取移动设备的数据包。步骤：Tools –> Telerik Fiddler Options -> Allow remote computers to connect，将移动端的代理设置为 PC 的 IP 和端口，并访问该地址，点击FiddlerRoot certificate下载并安装证书。
 
 * 低网速模式 
 
