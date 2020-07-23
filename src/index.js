@@ -10,3 +10,17 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+function useTitle(t) {
+  useEffect(() => {
+    document.title = t
+  }, [t])
+}
+
+// --------
+// EXAMPLE
+// --------
+function Demo(props) {
+  useTitle(props.isEdit ? '编辑' : '新增')
+  // ....
+}
+
