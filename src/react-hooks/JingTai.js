@@ -21,7 +21,7 @@ export default function () {
 
 		return () => {
 			console.log("over" + time);
-			didCancel = true; 
+			didCancel = true;//会在下一次渲染完成之后执行 
 		};
 	}, [time]);
 
