@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback, useReducer, useEffect } from "react";
+import React, { useState, useRef, useCallback } from "react";
 
 let useRefState = initalState => {
 	const ins = useRef();
@@ -22,31 +22,26 @@ let useRefState = initalState => {
 		}
 	}, []);
 
-	return [state, setValue, ins];
+	return [ins, setValue];
 };
 
 export default function Counter(){
-  const [count, setCount, countRef] = useRefState(0);
+  const [count, setCount] = useRefState(0);
   const handleIncr = useCallback(()=>{
-    setCount(countRef.current + 1);//可持续更新
-    //setCount(count + 1)//闭包问题只更新一次
+    setCount(count.current + 1);//可持续更新
   }, []);
 
-  useEffect(()=>{
-    console.log(count)
-    return()=>{
-      //setCount(countRef.current)
-    }
-  }, [])
-
-  // useEffect(()=>{
-  //   console.log(count)
-  // }) 
+  const handleAlert = ()=>{
+    setTimeout(()=>{
+      alert(count.current)
+    }, 5000)
+  }
 
   return (
     <div>
-      {count}
+      count：{count.current}
       <button onClick={handleIncr}>+</button>
+      <button onClick={handleAlert}> 5秒弹出count值 </button>
     </div>
   )
 }

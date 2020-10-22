@@ -1,0 +1,170 @@
+.admin-layout-container {
+  display: flex;
+  min-height: 100%;
+
+  .admin-side-bar {
+    width: 220px;
+    background: #161920;
+    color: #ddd;
+    position: relative;
+
+    .admin-title {
+      font-size: 24px;
+      height: 56px;
+      line-height: 56px;
+      background: #1a1e25;
+      padding-left: 24px;
+      display: flex;
+      position: relative;
+
+      h3 {
+        display: inline-block;
+        font-size: 18px;
+        flex-grow: 1;
+        color: #fff;
+      }
+    }
+    
+    .admin-footer{
+      position: fixed;
+      bottom: 24px;
+
+      .admin-avatar{
+        .avatar-icon {
+          width: 28px;
+          height: 28px;
+          vertical-align: middle;
+          margin: 0 8px 0 24px;
+          border-radius: 14px;
+          cursor: pointer;
+        }
+
+        .user-name{
+          font-size: 16px;
+          color: rgba(255,255,255,0.80);
+          vertical-align: middle;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          max-width: 138px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .sidebar-menus {
+      margin-top: 24px;
+      // background: #232936;
+    }
+
+    .sidebar-menu-header {
+      font-size: 16px;
+      color: rgba(255,255,255,0.30);
+      height: 30px;
+      line-height: 30px;
+      position: relative;
+      p{
+        font-size: 12px;
+      }
+    }
+
+    .sidebar-menu-header .header-icon {
+      position: absolute;
+      top: 3px;
+      left: -26px;
+    }
+
+    .sidebar-menu-header-sub {
+      margin-left: 38px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.30);
+    }
+    .sidebar-menu-antd{
+      background: #161920;
+      font-size: 16px;
+      color: rgba(255,255,255,0.80);
+      .ant-menu-item{
+        font-size: 16px;
+      }
+      .ant-menu-item-selected{
+        background: #161920;
+        font-size: 18px;
+        color: #2970FF;
+        border-left: 4px solid #2970ff;
+        a{
+          color: #2970FF;
+          font-weight: 700;
+        }
+      }
+      .ant-menu-item-disabled{
+        height: 66px;
+      }
+      .ant-menu-sub{
+        background: #161920;
+        .ant-menu-item{
+          padding-left: 46px!important;
+        }
+      }
+    }
+  }
+
+  .admin-content-container {
+    flex-grow: 1;
+    background: #f4f4f4;
+    padding: 30px 50px;
+
+    footer {
+      text-align: center;
+      margin-top: 24px;
+    }
+  }
+}
+
+#root {
+  height: 100%;
+}
+
+
+//弹出菜单中自定义的tooltip类名，防止其他地方的tooltip样式被覆盖
+.admin-footer-tooltip{
+  .ant-tooltip-inner{
+    background-color: #fff;
+    padding: 0;
+    border-radius: 4px;
+    overflow: hidden;
+  
+    .admin-popmenus {
+      font-size: 14px;
+      color: #616266;
+      text-align: center;
+      line-height: 14px;
+      ul {
+        margin-bottom: 0;
+        .admin-popmenus-item{
+          display: flex;
+          line-height: 54px;
+          width: 172px;
+          height: 54px;
+          padding: 0 22px;
+          &:hover{
+            background: #e6f7ff;
+          }
+
+          img{
+            margin-right: 16px;
+          }
+          
+          a{
+            color: #616266;
+          }
+        }
+      }
+    }
+  }
+  
+  .ant-tooltip-arrow{
+    .ant-tooltip-arrow-content{
+      background-color: #fff;
+    }
+  }  
+}
