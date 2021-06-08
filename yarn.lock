@@ -982,6 +982,14 @@
     "@babel/helper-plugin-utils" "^7.8.3"
     "@babel/plugin-transform-typescript" "^7.9.0"
 
+"@babel/runtime-corejs2@^7.9.2":
+  version "7.14.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs2/-/runtime-corejs2-7.14.0.tgz#5519b92ccc819bd3d0a1ecb25ab3cb5a775485f8"
+  integrity sha512-btR4E8JiGlmmDI5YgirlG9z3T91rBdxnVh2YuEStrHDcekffaaIeK+CE0S4IaYUyYhMa7rFDfF2GEO79XNbLEA==
+  dependencies:
+    core-js "^2.6.5"
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime-corejs3@^7.10.2":
   version "7.10.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime-corejs3/-/runtime-corejs3-7.10.3.tgz#931ed6941d3954924a7aa967ee440e60c507b91a"
@@ -1911,6 +1919,13 @@ alphanum-sort@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
+
+amap-js@^2.1.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/amap-js/-/amap-js-2.3.0.tgz#3ddd213068dc178e54c74daec530876f026472c0"
+  integrity sha512-qmIGReUMoBV2TnMq93YBlFceiiIooQGuYE2cwvPuLZgK1Sgb9r7OvpuKbVen0BqtBrPwc48A1njx2x4MZ8bEqA==
+  dependencies:
+    "@babel/runtime-corejs2" "^7.9.2"
 
 ansi-colors@^3.0.0:
   version "3.2.4"
@@ -3153,6 +3168,11 @@ core-js@^2.4.0:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.11.tgz#38831469f9922bded8ee21c9dc46985e0399308c"
   integrity sha512-5wjnpaT/3dV+XB4borEsnAYQchn00XSgTAWKDkEqv+K8KevjbzmofK6hfJ9TZIlpj2N0xQpazy7PiRQiWHqzWg==
+
+core-js@^2.6.5:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
+  integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
 core-js@^3.5.0:
   version "3.6.4"
@@ -6618,9 +6638,9 @@ memory-fs@^0.5.0:
     readable-stream "^2.0.1"
 
 merge-deep@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.2.tgz#f39fa100a4f1bd34ff29f7d2bf4508fbb8d83ad2"
-  integrity sha512-T7qC8kg4Zoti1cFd8Cr0M+qaZfOwjlPDEdZIIPPB2JZctjaPM4fX+i7HOId69tAti2fvO6X5ldfYUONDODsrkA==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.3.tgz#1a2b2ae926da8b2ae93a0ac15d90cd1922766003"
+  integrity sha512-qtmzAS6t6grwEkNrunqTBdn0qKwFgNWvlxUbAV8es9M7Ot1EbyApytCnvE0jALPa46ZpKDUo527kKiaWplmlFA==
   dependencies:
     arr-union "^3.1.0"
     clone-deep "^0.2.4"
@@ -8526,6 +8546,11 @@ raw-body@2.4.0:
     http-errors "1.7.2"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-amap@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/react-amap/-/react-amap-1.2.8.tgz#cb5a6441c5e83acb0d7b2e8a1b20dc539b759d9b"
+  integrity sha512-uHPEUXti+CcwFyCeqGGqR0ACnXJA9D8S/lQYal9AG3XEOrwkaOFbWUavrvXxjcfAclROIWg8uKxzlRpMQnkHFg==
 
 react-app-polyfill@^1.0.6:
   version "1.0.6"
